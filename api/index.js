@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import cors from "cors";
 import userRoute from "./routes/userRoute.js";
 import authRoute from "./routes/authRoute.js";
+import listingRoute from "./routes/listingRoute.js";
 import cookieParser from "cookie-parser";
 dotenv.config();
 
@@ -30,6 +31,7 @@ app.listen(3000, () => {
 
 app.use("/api/user", userRoute);
 app.use("/api/auth", authRoute);
+app.use("/api/listing", listingRoute);
 
 // error middleware
 app.use((err, req, res, next) => {
