@@ -22,7 +22,7 @@ export default function UpdateListing() {
     type: "rent",
     bedrooms: 1,
     bathrooms: 1,
-    regularPrice: 50,
+    regularPrice: 5000,
     discountPrice: 0,
     offer: false,
     parking: false,
@@ -292,7 +292,7 @@ export default function UpdateListing() {
                 type="number"
                 id="regularPrice"
                 min="50"
-                max="10000000"
+                max="50000000"
                 required
                 className="p-3 border border-gray-300 rounded-lg"
                 onChange={handleChange}
@@ -310,7 +310,7 @@ export default function UpdateListing() {
                   type="number"
                   id="discountPrice"
                   min="0"
-                  max="1000000"
+                  max="50000000"
                   required
                   className="p-3 border border-gray-300 rounded-lg"
                   onChange={handleChange}
@@ -377,7 +377,7 @@ export default function UpdateListing() {
             disabled={loading || uploading}
             className="p-3 bg-slate-700 text-white rounded-lg uppercase hover:opacity-95 disabled:opacity-80"
           >
-            {loading ? "Creating..." : "Update Listing"}
+            {loading ? "Updating..." : "Update Listing"}
           </button>
           {error && <p className="text-red-700 text-sm">{error}</p>}
         </div>
